@@ -1,4 +1,7 @@
 hello boyo
 my name is khan
 the khan of khans
+<<<<<<< HEAD
 the great khan! YIPEEE!!!!!
+=======
+>>>>>>> parent of d3ecbc9 (the commitfor the third time guys...)
