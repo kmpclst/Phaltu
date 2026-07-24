@@ -2,6 +2,10 @@ hello boyo
 my name is khan
 the khan of khans
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+the great khan! hohoho
+>>>>>>> ad2465fbbc84574b13a33ab512a6986dfb3a8d9c
 the great khan! YIPEEE!!!!!
 =======
 >>>>>>> parent of d3ecbc9 (the commitfor the third time guys...)
