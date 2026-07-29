@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS friend (
+    name   VARCHAR(255) PRIMARY KEY,
+    city VARCHAR(255) NOT NULL UNIQUE,
+    age     INT          NOT NULL
+);

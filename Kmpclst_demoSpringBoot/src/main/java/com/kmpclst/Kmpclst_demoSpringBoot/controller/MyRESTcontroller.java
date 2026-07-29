@@ -3,10 +3,11 @@ package com.kmpclst.Kmpclst_demoSpringBoot.controller;
 import com.kmpclst.Kmpclst_demoSpringBoot.model.Friend;
 import com.kmpclst.Kmpclst_demoSpringBoot.service.FriendService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+import java.util.Optional;
 
 @RestController
 public class MyRESTcontroller {
@@ -18,9 +19,14 @@ public class MyRESTcontroller {
         return friendService.Find();
     }
 
+    @GetMapping("/readfriend/{name}")
+    public Optional<Friend> readByName(@PathVariable String name) {
+        return friendService.FindByName(name);
+    }
+
     @PostMapping("/createfriend")
-    public void create(String name, String city, Integer age) {
-        friendService.AddFriend(name, city, age);
+    public void create(Friend friend) {
+        friendService.AddFriend(friend);
     }
 
     @DeleteMapping("/deletefriend")

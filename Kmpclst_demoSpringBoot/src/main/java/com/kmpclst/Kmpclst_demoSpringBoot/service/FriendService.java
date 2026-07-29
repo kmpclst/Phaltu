@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class FriendService {
@@ -13,18 +14,22 @@ public class FriendService {
     private FriendRepo friendRepo;
 
     public List<Friend> Find() {
-        return friendRepo.find();
+        return friendRepo.findAll();
     }
 
-    public void AddFriend(String name, String city, Integer age) {
-        friendRepo.addFriend(name, city, age);
+    public Optional<Friend> FindByName(String name) {
+        return friendRepo.findByName(name);
+    }
+
+    public void AddFriend(Friend friend) {
+        friendRepo.save(friend);
     }
 
     public void DeleteFriend(String name) {
-        friendRepo.deleteFriend(name);
+        friendRepo.deleteByName(name);
     }
 
     public void UpdateFriend(String name, String city, Integer age) {
-        friendRepo.updateFriend(name, city, age);
+        friendRepo.updateByName(name, city, age);
     }
 }

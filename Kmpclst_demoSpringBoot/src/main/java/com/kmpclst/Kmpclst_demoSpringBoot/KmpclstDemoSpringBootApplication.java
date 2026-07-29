@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class KmpclstDemoSpringBootApplication {
 	public static void main(String[] args) {
         SpringApplication.run(KmpclstDemoSpringBootApplication.class, args);
-        System.out.println("Hello World! My name is Khan. HOHO ");
+        System.out.println("Hello World! My name is Khan.");
 	}
 }
