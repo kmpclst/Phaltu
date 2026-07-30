@@ -1,0 +1,6 @@
+com\banking\credit\LoanCalculatorLifecycleTest.class
+com\banking\credit\LoanCalculatorTest.class
+com\banking\credit\LoanEligibilityLifecycleTest.class
+com\banking\credit\LoanEligibilityTest.class
+com\banking\credit\LoanCalculatorFixtureTest.class
+com\banking\credit\LoanEligibilityFixtureTest.class
