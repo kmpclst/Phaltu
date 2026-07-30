@@ -25,8 +25,8 @@ public class MyRESTcontroller {
     }
 
     @PostMapping("/createfriend")
-    public void create(Friend friend) {
-        friendService.AddFriend(friend);
+    public Friend create(Friend friend) {
+        return friendService.AddFriend(friend);
     }
 
     @DeleteMapping("/deletefriend")

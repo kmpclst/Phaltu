@@ -21,8 +21,8 @@ public class FriendService {
         return friendRepo.findByName(name);
     }
 
-    public void AddFriend(Friend friend) {
-        friendRepo.save(friend);
+    public Friend AddFriend(Friend friend) {
+        return friendRepo.save(friend);
     }
 
     public void DeleteFriend(String name) {

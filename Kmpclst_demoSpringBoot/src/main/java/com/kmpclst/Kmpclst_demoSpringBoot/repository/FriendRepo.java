@@ -69,13 +69,14 @@ public class FriendRepo {
         return results.isEmpty() ? Optional.empty() : Optional.of(results.get(0));
     }
 
-    public void save(Friend friend) {
+    public Friend save(Friend friend) {
         jdbc.update(
                 "INSERT INTO friend (name, city, age) VALUES (?, ?, ?)",
                 friend.getName(),
                 friend.getCity(),
                 friend.getAge()
         );
+        return friend;
     }
 
     public void deleteByName(String name) {
